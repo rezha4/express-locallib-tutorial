@@ -26,7 +26,7 @@ mongoose.set("strictQuery", false);
 
 require("dotenv").config()
 
-const mongoDB = process.env.SECRET_KEY;
+const mongoDB = process.env.SECRET_KEY || MONGODB_URI;
 
 main().catch((err) => console.log(err));
 async function main() {
